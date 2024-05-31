@@ -111,10 +111,10 @@ const Products = () => {
     }, [currentPage]);
 
     console.log(products);
-    
+
 
     return (
-        <div className="products w-100 h-100 overflow-auto bg-custom">
+        <div className="products w-100 h-100 min-vh-100 overflow-auto bg-custom">
             <div className="container d-flex justify-content-center align-items-center">
                 <Container>
                     <Row>
@@ -147,7 +147,7 @@ const Products = () => {
                         </div>
                     </Row>
                     <Row className="d-flex justify-content-center">
-                        <Col className="text-start mb-3" lg={2}>
+                        <Col className="text-start mb-3 d-flex justify-content-center align-items-start" lg={2}>
                             <Dropdown as={ButtonGroup}>
                                 <div className="custom-btn">
                                     <Dropdown.Toggle id="dropdown-custom-1" variant="none" >Categorías</Dropdown.Toggle>
@@ -161,7 +161,7 @@ const Products = () => {
                         </Col>
                         <Col>
                             {!loading ? <Row xs={1} md={2} lg={1} className="g-4">
-                                {products.map(product =>
+                                {products.length > 0 ? products.map(product =>
                                     <Col key={product.id}>
                                         <Row key={product.id} className="d-flex flex-row bg-light text-start">
                                             <Col xs="6" lg="3" className="d-flex justify-content-center">
@@ -179,53 +179,62 @@ const Products = () => {
                                             </Col>
                                         </Row>
                                     </Col>
-                                )}
-                            </Row> : <div className='mt-5'>
-                                <Spinner />
-                            </div>}
+                                )
+                                    :
+                                    <div className="">
+                                        <img className="w-25" src="/images/grumpy.webp" alt="Grumpy Cat" />
+                                        <h3>No hay resultados.</h3>
+                                    </div>
+                                }
+                                <div className='d-flex m-auto justify-content-center mt-5 w-50'>
+                                    <Pagination className='mt-5'>
+                                        <Pagination.First onClick={() => handlePageChange(1)} disabled={currentPage === 1} />
+                                        <Pagination.Prev onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} />
+                                        {currentPage > 2 && <Pagination.Item
+                                            key={currentPage - 2}
+                                            onClick={() => handlePageChange(currentPage - 2)}
+                                        >
+                                            {currentPage - 2}
+                                        </Pagination.Item>}
+                                        {currentPage > 1 && <Pagination.Item
+                                            key={currentPage - 1}
+                                            onClick={() => handlePageChange(currentPage - 1)}
+                                        >
+                                            {currentPage - 1}
+                                        </Pagination.Item>}
+                                        <Pagination.Item
+                                            key={currentPage}
+                                            active
+                                            onClick={() => handlePageChange(currentPage)}
+                                        >
+                                            {currentPage}
+                                        </Pagination.Item>
+                                        {currentPage <= totalPages - 1 && <Pagination.Item
+                                            key={currentPage + 1}
+                                            onClick={() => handlePageChange(currentPage + 1)}
+                                        >
+                                            {currentPage + 1}
+                                        </Pagination.Item>}
+                                        {currentPage <= totalPages - 2 && <Pagination.Item
+                                            key={currentPage + 2}
+                                            onClick={() => handlePageChange(currentPage + 2)}
+                                        >
+                                            {currentPage + 2}
+                                        </Pagination.Item>}
+                                        <Pagination.Next onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} />
+                                        <Pagination.Last onClick={() => handlePageChange(totalPages)} disabled={currentPage === totalPages} />
+                                    </Pagination>
+                                </div>
+                            </Row>
+
+                                : <div className='mt-5'>
+                                    <Spinner />
+                                </div>}
                         </Col>
                     </Row>
                 </Container>
             </div>
-            <div className='d-flex m-auto justify-content-center mt-5 w-50'>
-                <Pagination className='mt-5'>
-                    <Pagination.First onClick={() => handlePageChange(1)} disabled={currentPage === 1} />
-                    <Pagination.Prev onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} />
-                    {currentPage > 2 && <Pagination.Item
-                        key={currentPage - 2}
-                        onClick={() => handlePageChange(currentPage - 2)}
-                    >
-                        {currentPage - 2}
-                    </Pagination.Item>}
-                    {currentPage > 1 && <Pagination.Item
-                        key={currentPage - 1}
-                        onClick={() => handlePageChange(currentPage - 1)}
-                    >
-                        {currentPage - 1}
-                    </Pagination.Item>}
-                    <Pagination.Item
-                        key={currentPage}
-                        active
-                        onClick={() => handlePageChange(currentPage)}
-                    >
-                        {currentPage}
-                    </Pagination.Item>
-                    {currentPage <= totalPages - 1 && <Pagination.Item
-                        key={currentPage + 1}
-                        onClick={() => handlePageChange(currentPage + 1)}
-                    >
-                        {currentPage + 1}
-                    </Pagination.Item>}
-                    {currentPage <= totalPages - 2 && <Pagination.Item
-                        key={currentPage + 2}
-                        onClick={() => handlePageChange(currentPage + 2)}
-                    >
-                        {currentPage + 2}
-                    </Pagination.Item>}
-                    <Pagination.Next onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} />
-                    <Pagination.Last onClick={() => handlePageChange(totalPages)} disabled={currentPage === totalPages} />
-                </Pagination>
-            </div>
+
         </div>
     )
 }
