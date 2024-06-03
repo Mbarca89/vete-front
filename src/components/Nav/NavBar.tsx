@@ -14,9 +14,7 @@ const NavBar = () => {
     const location = useLocation()
 
     const [open, setOpen] = useState(false);
-    console.log(location.pathname);
     
-
     return (
         <>
             <div className={`bg-blur ${open ? 'open' : ''}`} onClick={() => setOpen(false)} />

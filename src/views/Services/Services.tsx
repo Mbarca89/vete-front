@@ -8,7 +8,7 @@ const Services = () => {
         AOS.init()
     }, [])
     return (
-        <div className="container d-grid mt-5 gap-5 flex-grow-1">
+        <div className="container d-grid mt-5 gap-5 flex-grow-1 overflow-x-hidden">
             <div className="bg-grey d-flex col-12 col-lg-8 flex-lg-row flex-column p-1 rounded" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-duration="500">
                 <div className="col-4">
                     imagen

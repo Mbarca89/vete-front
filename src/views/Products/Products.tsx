@@ -88,13 +88,17 @@ const Products = () => {
             else event.target.value ? searchTerm = event.target.value : searchTerm = ""
             let res
             if (searchTerm == "") {
-                res = await axiosWithToken.get(`${SERVER_URL}/api/v1/products/public/getProductsPaginated?page=${currentPage}&size=${pageSize}`)
+                res = await axiosWithoutToken.get(`${SERVER_URL}/api/v1/products/public/getProductsPaginated?page=${currentPage}&size=${pageSize}`)
+                if (res.data) {
+                    setProducts(res.data.data);
+                }
             } else {
-                res = await axiosWithToken.get(`${SERVER_URL}/api/v1/products/public/searchProduct?searchTerm=${searchTerm}`)
+                res = await axiosWithoutToken.get(`${SERVER_URL}/api/v1/products/public/searchProduct?searchTerm=${searchTerm}`)
+                if (res.data) {
+                    setProducts(res.data);
+                }
             }
-            if (res.data) {
-                setProducts(res.data);
-            }
+            
             setLoading(false)
         } catch (error: any) {
             handleError(error)
@@ -110,9 +114,6 @@ const Products = () => {
         fetchProducts();
     }, [currentPage]);
 
-    console.log(products);
-
-
     return (
         <div className="products w-100 h-100 min-vh-100 overflow-auto bg-custom">
             <div className="container d-flex justify-content-center align-items-center">
@@ -122,7 +123,7 @@ const Products = () => {
                             <Row className="mt-3 mb-3 d-flex justify-content-center align-items-center w-100">
                                 <Col xs="auto" lg="4">
                                     <Form.Control
-                                        type="text"
+                                        type="search"
                                         placeholder="Buscar"
                                         className=""
                                         onChange={handleResetSearch}
