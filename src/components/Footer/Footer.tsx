@@ -25,7 +25,7 @@ const Footer = () => {
                         </Col>
                         <Col lg={5} sm={12} className="text-start text-lg-center mt-5 mt-lg-2">
                             <div className="position-relative">
-                                <img className="w-50 position-absolute start-0 bottom-0" src="/images/cat2.png" alt="" />
+                                <img className="w-50 position-absolute start-0 bottom-0" src="/images/cat2.webp" alt="" />
                                 <h6 className="text-end mb-0">Horarios de atención</h6>
                             </div>
                             <hr className="mt-0" />

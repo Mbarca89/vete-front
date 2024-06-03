@@ -17,7 +17,7 @@ const ServicesHome = () => {
                 <p className="mb-lg-5 mb-0 public-sans mb-5">Tu mascota es parte de nuestra familia. Nos dedicamos a brindar el mejor cuidado y atención para que tu peludo amigo se mantenga feliz y saludable. Descubrí los servicios que ofrecemos para mantener a tu mascota en óptimas condiciones.</p>
                 <div className="w-100 h-sm-75 h-lg-50 d-flex flex-lg-row flex-column">
                     <div className="w-sm-100 w-lg-50 h-sm-50 d-flex align-items-center justify-content-center mb-5">
-                        <Image roundedCircle className="w-sm-75 w-lg-50" src="/images/serviceshome.png" alt="" />
+                        <Image roundedCircle className="w-sm-75 w-lg-50" src="/images/serviceshome.webp" alt="" />
                     </div>
                     <div className="d-flex w-lg-50 flex-column justify-content-center gap-3 gap-lg-5 mb-5">
                         <Row>

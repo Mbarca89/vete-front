@@ -26,7 +26,7 @@ const Landing = () => {
                     </div>
                     <div className="d-flex align-items-lg-center justify-content-lg-center justify-content-end align-items-start h-lg-50 h-sm-40 w-lg-50 w-100">
                         <button type='button' onClick={() => navigate("/productos")} className="d-sm-none custom-btn mt-3 mb-3 text-dark public-sans bg-grey fw-bold p-2 ps-3 pe-3">Productos</button>
-                        <img className="h-lg-100 h-sm-75 z-0" src="/images/paw.png" alt="" />
+                        <img className="h-lg-100 h-sm-75 z-0" src="/images/paw.webp" alt="" />
                     </div>
                 </div>
             </div>
