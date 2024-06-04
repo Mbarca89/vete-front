@@ -69,7 +69,7 @@ const NavBar = () => {
                     <Nav.Link className="text-light nav-link-mobile fs-2" href="/productos" onClick={() => {setOpen(false)}}>Productos</Nav.Link>
                     <Nav.Link className="text-light nav-link-mobile fs-2" href="/nosotros" onClick={() => {setOpen(false)}}>Nosotros</Nav.Link>
                 </Nav>
-                <Nav className="d-flex flex-row gap-4 position-relative bottom-10">
+                <Nav className="d-flex flex-row gap-4 position-relative mb-5">
                     <Navbar.Brand href="https://www.instagram.com/vet_del_parque/" target="window">
                         <img
                             alt="Veterinaria del Parque"
