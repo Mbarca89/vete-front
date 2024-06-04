@@ -6,6 +6,7 @@ import Home from "./views/Home/Home"
 import NavBar from "./components/Nav/NavBar"
 import Products from "./views/Products/Products"
 import Services from "./views/Services/Services"
+import About from "./views/About/About"
 import { useRecoilState } from "recoil"
 import { logState, userState } from "./app/store"
 import { Toaster } from 'react-hot-toast';
@@ -53,6 +54,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/productos" element={<Products />} />
           <Route path="/servicios" element={<Services />} />
+          <Route path="/nosotros" element={<About />} />
         </Route>
       </Routes>
     </div>

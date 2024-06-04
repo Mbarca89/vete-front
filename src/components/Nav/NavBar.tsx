@@ -37,7 +37,7 @@ const NavBar = () => {
                             <Nav.Link className="text-light nav-link" onClick={() => navigate("/")}>Inicio</Nav.Link>
                             <Nav.Link className="text-light nav-link" onClick={() => {setOpen(false),navigate("/servicios")}}>Servicios</Nav.Link>
                             <Nav.Link className="text-light nav-link" onClick={() => navigate("/productos")}>Productos</Nav.Link>
-                            <Nav.Link className="text-light nav-link" href="#link">Nosotros</Nav.Link>
+                            <Nav.Link className="text-light nav-link" onClick={() => navigate("/nosotros")}>Nosotros</Nav.Link>
                         </Nav>
                         <Nav className="">
                             <Navbar.Brand href="https://www.instagram.com/vet_del_parque/" target="window">
@@ -64,10 +64,10 @@ const NavBar = () => {
             </Navbar>
             {open && <div className={`d-flex flex-column h-100 position-fixed z-3 align-items-center ${open ? "menu-opened" : "menu-closed"}`}>
                 <Nav className="d-flex flex-column align-items-center justify-content-center flex-grow-1">
-                    <Nav.Link className="text-light nav-link-mobile" href="/" onClick={() => {setOpen(false)}}>Inicio</Nav.Link>
-                    <Nav.Link className="text-light nav-link-mobile" href="/servicios" onClick={() => {setOpen(false)}}>Servicios</Nav.Link>
-                    <Nav.Link className="text-light nav-link-mobile" href="/productos" onClick={() => {setOpen(false)}}>Productos</Nav.Link>
-                    <Nav.Link className="text-light nav-link-mobile" href="#link">Nosotros</Nav.Link>
+                    <Nav.Link className="text-light nav-link-mobile fs-2" href="/" onClick={() => {setOpen(false)}}>Inicio</Nav.Link>
+                    <Nav.Link className="text-light nav-link-mobile fs-2" href="/servicios" onClick={() => {setOpen(false)}}>Servicios</Nav.Link>
+                    <Nav.Link className="text-light nav-link-mobile fs-2" href="/productos" onClick={() => {setOpen(false)}}>Productos</Nav.Link>
+                    <Nav.Link className="text-light nav-link-mobile fs-2" href="/nosotros" onClick={() => {setOpen(false)}}>Nosotros</Nav.Link>
                 </Nav>
                 <Nav className="d-flex flex-row gap-4 position-absolute bottom-10">
                     <Navbar.Brand href="https://www.instagram.com/vet_del_parque/" target="window">
