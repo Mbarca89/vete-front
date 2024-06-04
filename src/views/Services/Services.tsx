@@ -93,7 +93,7 @@ const Services = () => {
             <div className="text-light d-flex flex-column gap-3">
                 <h3>¿Dudas o consultas?</h3>
                 <h5>Envianos un mensaje y te respondemos lo antes posible.</h5>
-                <div className="d-flex flex-row justify-content-center gap-lg-5 gap-3">
+                <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-lg-5 gap-3">
                     <a href="https://wa.me/5492664392132" target="window" className="text-decoration-none text-light">
                         <div className="d-flex flex-row mb-3 align-items-center" >
                             <img
@@ -101,13 +101,13 @@ const Services = () => {
                                 src="/images/whatsapp.svg"
                                 width="40"
                                 height="40"
-                                className="d-inline-block text-light"
+                                className="d-inline-block text-light m-0 p-0"
                             />
-                            <p className="m-0 ms-3">266-4331778</p>
+                            <p className="m-0 ms-4">+54 9 266 - 4392132</p>
                         </div>
                     </a>
                     <a href="https://www.instagram.com/vet_del_parque/" target="window" className="text-decoration-none text-light">
-                        <div className="d-flex flex-row align-items-center">
+                        <div className="d-flex flex-row mb-3 align-items-center">
                             <img
                                 alt="Veterinaria del Parque"
                                 src="/images/instagram.svg"

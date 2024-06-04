@@ -11,33 +11,32 @@ const Footer = () => {
                 </svg>
             </div>
             <div className="container w-100 d-flex flex-column flex-grow-1 align-items-center justify-content-end">
+                <div className="w-sm-100 w-lg-50">
+                    <img className="w-75 w-lg-25" src="/images/cat2.webp" alt="" />
+                </div>
                 <div className="d-flex w-100 justify-content-center flex-lg-row flex-column mt-5">
                     <Row className="w-100 d-flex justify-content-center">
-                        <Col lg={3} sm={12} className="text-start">
+                        <Col lg={3} sm={12} className="text-start mt-lg-0">
                             <h6 className="mt-2 mb-0">Secciones</h6>
                             <hr className="mt-0" />
-                            <ul>
-                                <li><a href="/servicios">Servicios</a></li>
-                                <li><a href="/productos">Productos</a></li>
-                                <li><a href="/nosotros">Nosotros</a></li>
-                                <hr className="opacity-0" />
-                            </ul>
+                                <ul className="d-flex flex-column justify-content-between h-75">
+                                    <li><a href="/servicios">Servicios</a></li>
+                                    <li><a href="/productos">Productos</a></li>
+                                    <li><a href="/nosotros">Nosotros</a></li>
+                                </ul>
                         </Col>
-                        <Col lg={5} sm={12} className="text-start text-lg-center mt-5 mt-lg-2">
-                            <div className="position-relative">
-                                <img className="w-50 position-absolute start-0 bottom-0" src="/images/cat2.webp" alt="" />
-                                <h6 className="text-end mb-0">Horarios de atención</h6>
-                            </div>
+                        <Col lg={3} sm={12} className="text-start mt-5 mt-lg-0">
+                            <h6 className="mt-2 mb-0">Horarios de atención</h6>
                             <hr className="mt-0" />
-                            <p className="lead mb-0">Lunes a Viernes</p>
-                            <p className="mt-0">de 10 a 20 Hs</p>
-                            <p className="lead mb-0">Sabados</p>
-                            <p>de 9 a 13 y de 16 a 20 Hs</p>
+                            <div className="d-flex flex-column justify-content-between h-75">
+                                <p className="mb-0"><b>Lunes a Viernes </b>de 10 a 20 Hs</p>
+                                <p className="mb-0"><b>Sabados </b>de 9 a 13 y de 16 a 20 Hs</p>
+                            </div>
                         </Col>
-                        <Col lg={3} sm={12} className="text-start">
+                        <Col lg={3} sm={12} className="text-start mt-5 mt-lg-0">
                             <h6 className="mt-2 mb-0">Contactanos</h6>
                             <hr className="mt-0" />
-                            <div>
+                            <div className="d-flex flex-column justify-content-between h-75">
                                 <a href="https://wa.me/5492664392132" target="window" className="text-decoration-none text-dark">
                                     <div className="d-flex flex-row mb-3 align-items-center" >
                                         <img
@@ -47,7 +46,7 @@ const Footer = () => {
                                             height="40"
                                             className="d-inline-block text-light me-2"
                                         />
-                                        <p className="m-0">+54 9 2664 331778</p>
+                                        <p className="m-0">+54 9 266 - 4392132</p>
                                     </div>
                                 </a>
                                 <a href="https://www.instagram.com/vet_del_parque/" target="window" className="text-decoration-none text-dark">
