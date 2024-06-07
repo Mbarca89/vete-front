@@ -23,6 +23,7 @@ const Footer = () => {
                                     <li><a href="/servicios">Servicios</a></li>
                                     <li><a href="/productos">Productos</a></li>
                                     <li><a href="/nosotros">Nosotros</a></li>
+                                    <li><a href="/chipeado">Chipeado</a></li>
                                 </ul>
                         </Col>
                         <Col lg={3} sm={12} className="text-start mt-5 mt-lg-0">

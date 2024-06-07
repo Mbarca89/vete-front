@@ -7,7 +7,7 @@ const Landing = () => {
     const navigate = useNavigate()
 
     return (
-        <div className="landing d-flex w-100 h-100 position-relative">
+        <div className="landing d-flex w-100 h-100 position-relative z-1">
             <div className='container h-100 w-100'>
                 <div className="custom-shape-divider-bottom-1716215760">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

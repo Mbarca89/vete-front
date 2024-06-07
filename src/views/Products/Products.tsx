@@ -98,7 +98,7 @@ const Products = () => {
                     setProducts(res.data);
                 }
             }
-            
+
             setLoading(false)
         } catch (error: any) {
             handleError(error)
@@ -115,7 +115,11 @@ const Products = () => {
     }, [currentPage]);
 
     return (
-        <div className="products w-100 h-100 min-vh-100 overflow-auto bg-custom">
+        <div className="products w-100 h-100 min-vh-100 overflow-auto bg-custom flex-column">
+            <div className="w-sm-100 w-lg-100 d-flex flex-column justify-content-center rounded mt-3 p-1">
+                <h3>¡Dale un gustito, se lo merece!</h3>
+                <p>Veni y conocé todos los accesorios que tenemos para tu amigo de cuatro patas. Chalecos, collares, correas, y si querés mimarlo un poco de más ¡tambien tenemos juguetes y golosinas!</p>
+            </div>
             <div className="container d-flex justify-content-center align-items-center">
                 <Container>
                     <Row>

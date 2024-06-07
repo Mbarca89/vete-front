@@ -11,7 +11,7 @@ const ServicesHome = () => {
     const navigate = useNavigate()
 
     return (
-        <div className="services-home d-flex flex-column w-100 position-relative">
+        <div className="services-home d-flex flex-column w-100 position-relative z-1">
             <div className="container d-flex flex-column flex-grow-1 h-100 justify-content-lg-center mb-5">
                 <h1 className="mb-4 goudy-regular-italic fw-bold fs-1">Servicios</h1>
                 <p className="mb-lg-5 mb-0 public-sans mb-5">Tu mascota es parte de nuestra familia. Nos dedicamos a brindar el mejor cuidado y atención para que tu peludo amigo se mantenga feliz y saludable. Descubrí los servicios que ofrecemos para mantener a tu mascota en óptimas condiciones.</p>
@@ -50,9 +50,10 @@ const ServicesHome = () => {
                                 </svg>
                             </Col>
                             <Col>
-                                <h6 className="public-sans">Chipeado</h6>
-                                <h6 className="public-sans">de mascotas</h6>
-                                <svg width="50" height="50" viewBox="0 0 512 512" style={{ color: "#63316b" }} xmlns="http://www.w3.org/2000/svg" className="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent" strokeWidth="0" strokeOpacity="100%" paintOrder="stroke"></rect><svg width="512px" height="512px" viewBox="0 0 32 32" fill="#63316b" x="0" y="0" role="img" style={{ display: "inline-block;vertical-align:middle" }} xmlns="http://www.w3.org/2000/svg"><g fill="#63316b"><path fill="currentColor" d="M21 9H8a2.002 2.002 0 0 0-2 2v10a2.002 2.002 0 0 0 2 2h13a2.002 2.002 0 0 0 2-2V11a2.002 2.002 0 0 0-2-2Zm0 4h-3v-2h3Zm-3 2h3v2h-3Zm-2-4v10h-3v-7a1 1 0 0 0-1-1H8v-2Zm-5 6H8v-2h3Zm-3 2h3v2H8Zm10 2v-2h3v2Z" /><path fill="currentColor" d="M23.532 27H4a2.002 2.002 0 0 1-2-2V7a2.002 2.002 0 0 1 2-2h24a2.002 2.002 0 0 1 2 2v12.638a2.004 2.004 0 0 1-.464 1.28l-4.468 5.362a1.994 1.994 0 0 1-1.536.72ZM4 7v18h19.532L28 19.638V7Z" /></g></svg></svg>
+                                <h6 className="public-sans">Clínica</h6>
+                                <h6 className="public-sans">médica</h6>
+                                <svg width="50" height="50" viewBox="0 0 512 512" style={{color:"#63316b"}} xmlns="http://www.w3.org/2000/svg" className="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px" height="512px" viewBox="0 0 48 48" fill="#63316b" x="0" y="0" role="img" style={{display:"inline-block;vertical-align:middle"}} xmlns="http://www.w3.org/2000/svg"><g fill="#63316b"><g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M14 24v8h8v-8h-8Zm6 6v-4h-4v4h4Z"/><path d="M19 6a6.002 6.002 0 0 0-5.653 3.985H6v2.481l4 3.03V40H7a1 1 0 1 0 0 2h3v.015h28V42h3a1 1 0 1 0 0-2h-3V15.532l4.5-3.03V9.984H24.653A6.002 6.002 0 0 0 19 6Zm5.659 8A5.99 5.99 0 0 0 25 12v-.015h14.687L36.695 14H24.659Zm-1.187 2A5.985 5.985 0 0 1 19 18a5.985 5.985 0 0 1-4.472-2H12v24h12V24h10v16h2V16H23.472ZM13 12c0 .701.12 1.374.341 2h-2.005l-2.66-2.015H13V12Zm7-1V9h-2v2h-2v2h2v2h2v-2h2v-2h-2Zm12 15v14h-6V26h6Z"/></g></g></svg></svg>
+                                {/* <svg width="50" height="50" viewBox="0 0 512 512" style={{ color: "#63316b" }} xmlns="http://www.w3.org/2000/svg" className="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent" strokeWidth="0" strokeOpacity="100%" paintOrder="stroke"></rect><svg width="512px" height="512px" viewBox="0 0 32 32" fill="#63316b" x="0" y="0" role="img" style={{ display: "inline-block;vertical-align:middle" }} xmlns="http://www.w3.org/2000/svg"><g fill="#63316b"><path fill="currentColor" d="M21 9H8a2.002 2.002 0 0 0-2 2v10a2.002 2.002 0 0 0 2 2h13a2.002 2.002 0 0 0 2-2V11a2.002 2.002 0 0 0-2-2Zm0 4h-3v-2h3Zm-3 2h3v2h-3Zm-2-4v10h-3v-7a1 1 0 0 0-1-1H8v-2Zm-5 6H8v-2h3Zm-3 2h3v2H8Zm10 2v-2h3v2Z" /><path fill="currentColor" d="M23.532 27H4a2.002 2.002 0 0 1-2-2V7a2.002 2.002 0 0 1 2-2h24a2.002 2.002 0 0 1 2 2v12.638a2.004 2.004 0 0 1-.464 1.28l-4.468 5.362a1.994 1.994 0 0 1-1.536.72ZM4 7v18h19.532L28 19.638V7Z" /></g></svg></svg> */}
                             </Col>
                         </Row>
                         <Row>

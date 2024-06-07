@@ -36,6 +36,7 @@ const NavBar = () => {
                         <Nav className="flex-lg-grow-1 d-lg-flex flex-lg-row justify-content-lg-start">
                             <Nav.Link className="text-light nav-link" onClick={() => navigate("/")}>Inicio</Nav.Link>
                             <Nav.Link className="text-light nav-link" onClick={() => {setOpen(false),navigate("/servicios")}}>Servicios</Nav.Link>
+                            <Nav.Link className="text-light nav-link" onClick={() => {setOpen(false),navigate("/chipeado")}}>Chipeado</Nav.Link>
                             <Nav.Link className="text-light nav-link" onClick={() => navigate("/productos")}>Productos</Nav.Link>
                             <Nav.Link className="text-light nav-link" onClick={() => navigate("/nosotros")}>Nosotros</Nav.Link>
                         </Nav>
@@ -66,6 +67,7 @@ const NavBar = () => {
                 <Nav className="d-flex flex-column align-items-center justify-content-center flex-grow-1">
                     <Nav.Link className="text-light nav-link-mobile fs-2" href="/" onClick={() => {setOpen(false)}}>Inicio</Nav.Link>
                     <Nav.Link className="text-light nav-link-mobile fs-2" href="/servicios" onClick={() => {setOpen(false)}}>Servicios</Nav.Link>
+                    <Nav.Link className="text-light nav-link-mobile fs-2" href="/chipeado" onClick={() => {setOpen(false)}}>Chipeado</Nav.Link>
                     <Nav.Link className="text-light nav-link-mobile fs-2" href="/productos" onClick={() => {setOpen(false)}}>Productos</Nav.Link>
                     <Nav.Link className="text-light nav-link-mobile fs-2" href="/nosotros" onClick={() => {setOpen(false)}}>Nosotros</Nav.Link>
                 </Nav>
