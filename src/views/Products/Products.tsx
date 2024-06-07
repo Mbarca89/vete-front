@@ -170,7 +170,7 @@ const Products = () => {
                                     <Col key={product.id}>
                                         <Row key={product.id} className="d-flex flex-row bg-light text-start">
                                             <Col xs="6" lg="3" className="d-flex justify-content-center">
-                                                <img style={{ height: '150px', objectFit: "contain" }} className='custom-card-img p-1 rounded' src={product.thumbnail ? `data:image/jpeg;base64,${product.thumbnail}` : noImage} alt={product.name} />
+                                                <img style={{ height: '150px', maxWidth: "100%", objectFit: "contain" }} className='custom-card-img p-1 rounded' src={product.thumbnail ? `data:image/jpeg;base64,${product.thumbnail}` : noImage} alt={product.name} />
                                             </Col>
                                             <Col xs="6" lg="8" className="d-flex flex-column justify-content-between">
                                                 <div className="d-flex flex-column justify-content-between">
