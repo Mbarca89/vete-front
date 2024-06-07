@@ -18,7 +18,9 @@ const ChipHome = () => {
                 <h3>¡Los tenemos cubiertos!</h3>
                 <p>Contamos con servicio de chipeado de mascotas y te facilitamos todos los trámites para que tu unica preocupación sea planear tus vacaciones.</p>
                 <p>¿Queres saber de que se trata?</p>
-                <button type='button' onClick={() => navigate("/chipeado")} className="custom-btn text-dark public-sans bg-grey fw-bold p-2 ps-3 pe-3">Ingresá aca</button>
+                <a href="/chipeado">
+                    <button type='button' className="custom-btn text-dark public-sans bg-grey fw-bold p-2 ps-3 pe-3">Ingresá aca</button>
+                </a>
             </div>
         </div>
     )
