@@ -26,9 +26,11 @@ const SERVER_URL = import.meta.env.VITE_REACT_APP_SERVER_URL;
 const Products = () => {
 
     const [loading, setLoading] = useState(false)
+    const [searching, setSearching] = useState(false)
     const [show, setShow] = useRecoilState(modalState)
     const [products, setProducts] = useState<product[]>([]);
     const [categories, setCategories] = useState<string[]>([])
+    const [currentCategory, setCurrentCategory] = useState<string>("")
     const [selectedProduct, setSelectedProduct] = useState<product>({
         id: 0,
         name: "",
@@ -51,11 +53,26 @@ const Products = () => {
     const fetchProducts = async () => {
         setLoading(true)
         try {
-            const categoriesResponse = await axiosWithoutToken.get<string[]>(`${SERVER_URL}/api/v1/category/getCategoriesNames`)
+            const categoriesResponse = await axiosWithoutToken.get<string[]>(`${SERVER_URL}/api/v1/category/public/getCategoriesNamesForWeb`)
             if (categoriesResponse.data) {
                 setCategories(categoriesResponse.data.sort())
             }
             const res = await axiosWithoutToken.get(`${SERVER_URL}/api/v1/products/public/getProductsPaginated?page=${currentPage}&size=${pageSize}`)
+            if (res.data) {
+                setTotalPages(Math.ceil(res.data.totalCount / pageSize));
+                setProducts(res.data.data);
+            }
+        } catch (error: any) {
+            handleError(error)
+        }
+        setLoading(false)
+    };
+
+    const fetchByCategory = async (categoryName: string) => {
+        setLoading(true)
+        setCurrentCategory(categoryName)
+        try {
+            const res = await axiosWithoutToken.get(`${SERVER_URL}/api/v1/products/public/getByCategoryForWeb?categoryName=${categoryName}&page=${currentPage}&size=${pageSize}`)
             if (res.data) {
                 setTotalPages(Math.ceil(res.data.totalCount / pageSize));
                 setProducts(res.data.data);
@@ -81,6 +98,7 @@ const Products = () => {
 
     const handleSearch = async (event: any) => {
         setLoading(true)
+        setSearching(true)
         let searchTerm
         event.preventDefault()
         try {
@@ -107,11 +125,21 @@ const Products = () => {
     }
 
     const handleResetSearch = (event: any) => {
-        if (event.target.value == "") fetchProducts()
+        if (event.target.value == "") {
+            fetchProducts()
+            setSearching(false)
+        }
+    }
+
+    const handleResetCategory = (event: any) => {
+        setCurrentCategory("")
+        fetchProducts()
+        setSearching(false)
     }
 
     useEffect(() => {
-        fetchProducts();
+        if (currentCategory != "") fetchByCategory(currentCategory)
+        else fetchProducts();
     }, [currentPage]);
 
     return (
@@ -158,8 +186,9 @@ const Products = () => {
                                     <Dropdown.Toggle id="dropdown-custom-1" variant="none" >Categorías</Dropdown.Toggle>
                                 </div>
                                 <Dropdown.Menu className="">
+                                    <Dropdown.Item key="todas" onClick={handleResetCategory}>Todas</Dropdown.Item>
                                     {categories.map((category) => (
-                                        <Dropdown.Item>{category}</Dropdown.Item>
+                                        <Dropdown.Item key={category} onClick={() => fetchByCategory(category)}>{category}</Dropdown.Item>
                                     ))}
                                 </Dropdown.Menu>
                             </Dropdown>
@@ -192,7 +221,7 @@ const Products = () => {
                                     </div>
                                 }
                                 <div className='d-flex m-auto justify-content-center mt-5 w-50'>
-                                    <Pagination className='mt-5'>
+                                    {!searching && <Pagination className='mt-5'>
                                         <Pagination.First onClick={() => handlePageChange(1)} disabled={currentPage === 1} />
                                         <Pagination.Prev onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} />
                                         {currentPage > 2 && <Pagination.Item
@@ -228,7 +257,7 @@ const Products = () => {
                                         </Pagination.Item>}
                                         <Pagination.Next onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} />
                                         <Pagination.Last onClick={() => handlePageChange(totalPages)} disabled={currentPage === totalPages} />
-                                    </Pagination>
+                                    </Pagination>}
                                 </div>
                             </Row>
 
