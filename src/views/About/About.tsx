@@ -29,7 +29,7 @@ const About = () => {
                         <img className="w-100 rounded" src="/images/nosotros2.webp" alt="" />
                     </div>
                     <div className="container w-50 p-0 p-lg-5 d-flex flex-column justify-content-center text-center bg-grey rounded text-dark">
-                        <h3 className="fs-5">Comprometidos con la comunidad.</h3>
+                        <h3 className="fs-5">¡La mejor atención!</h3>
                         <p>En cada visita nos esforzamos por brindar la mejor atención para que vuelvas a tu casa con la tranquilidad que tu mascota esta sana y bajo el cuidado de los mejores profesionales.</p>
                     </div>
                 </div>
