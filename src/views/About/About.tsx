@@ -7,7 +7,8 @@ const About = () => {
             <div className="d-flex flex-column flex-lg-row justify-content-between gap-1">
                 <div className="bg-grey rounded p-3 text-dark d-flex flex-column justify-content-center">
                     <h2 className="goudy-regular-italic fw-bold fs-1">Veterina del Parque</h2>
-                    <h3 className="fs-6 mt-3">¡Somos un equipo médico dedicado a dar lo mejor para el bienestar de tu mascota!</h3>
+                    <h3 className="fs-6 mt-1">¡Somos un equipo médico dedicado a dar lo mejor para el bienestar de tu mascota!</h3>
+                    <p>Desde el 2011 nos encargamos de mejorar la salud de los animales enfocados en brindar una atención compasiva, respeto y profesionalidad en cada consulta y tratamiento que realizamos. </p>
                 </div>
                 <img className="w-lg-50 w-sm-100 rounded" src="/images/nosotros.webp" alt="" />
             </div>
@@ -28,7 +29,7 @@ const About = () => {
                         <img className="w-100 rounded" src="/images/nosotros2.webp" alt="" />
                     </div>
                     <div className="container w-50 p-0 p-lg-5 d-flex flex-column justify-content-center text-center bg-grey rounded text-dark">
-                        <h3 className="fs-5">¡La mejor atención!</h3>
+                        <h3 className="fs-5">Comprometidos con la comunidad.</h3>
                         <p>En cada visita nos esforzamos por brindar la mejor atención para que vuelvas a tu casa con la tranquilidad que tu mascota esta sana y bajo el cuidado de los mejores profesionales.</p>
                     </div>
                 </div>
@@ -43,8 +44,8 @@ const About = () => {
             </div>
             <div className="d-flex flex-column flex-lg-row mt-1 text-dark w-100 gap-1">
                 <div className="w-sm-100 w-lg-50 d-flex flex-column justify-content-center bg-grey rounded">
-                    <h3>¡Dale un gustito, se lo merece!</h3>
-                    <p>Veni y conocé todos los accesorios que tenemos para tu amigo de cuatro patas. Chalecos, collares, correas, y si querés mimarlo un poco de más ¡tambien tenemos juguetes y golosinas!</p>
+                    <h3>Diagnostico completo para tu tranquilidad.</h3>
+                    <p>Siempre es mejor estar seguros, no es solo una simple consulta. Ante cualquier duda sobre algun malestar que pueda tener tu mascota, realizamos los estudios mas completos para descarcar cualquier patología presente o futura.</p>
                 </div>
                 <div className="w-sm-100 w-lg-50 d-flex flex-row gap-1">
                     <div className="w-50">
